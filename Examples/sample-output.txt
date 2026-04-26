@@ -1,1 +1,49 @@
+This is a sanitized portfolio version. Company names, hostnames, internal paths, and client-specific details have been removed.
 
+Sample Output
+
+FOUND HOST BACKUP: B:\Backup Host Drives
+
+=== Host VHDX Backup ===
+
+ALL HOST VHDX FILES FOUND:
+ -> A:\Host Drives\HOST-01.vhdx
+ -> A:\Host Drives\HOST-02.vhdx
+ -> A:\Host Drives\HOST-03.vhdx
+
+[1/3] Processing HOST-01.vhdx
+[1/3] SKIPPED (up-to-date): HOST-01.vhdx
+
+[2/3] Processing HOST-02.vhdx
+[2/3] Copying A:\Host Drives\HOST-02.vhdx -> B:\Backup Host Drives\HOST-02.vhdx
+[2/3] COPIED
+
+[3/3] Processing HOST-03.vhdx
+[3/3] SKIPPED (up-to-date): HOST-03.vhdx
+
+=== Post-Backup VHDX Check ===
+>> Mounting B:\Backup Host Drives\HOST-02.vhdx
+>> Checking E:...
+>> E: Healthy
+>> Dismounting B:\Backup Host Drives\HOST-02.vhdx
+
+=== VM Folder Backups ===
+FOUND VM SOURCE ROOT -> A:\Virtual Machines
+FOUND VM DESTINATION ROOT -> B:\Backup Virtual Machines
+
+VM FOLDERS FOUND:
+ -> VM-APP-01
+ -> VM-DB-01
+ -> VM-FILE-01
+
+[1/3] Backing up VM-APP-01
+[1/3] Copying A:\Virtual Machines\VM-APP-01 -> B:\Backup Virtual Machines\VM-APP-01
+[1/3] SKIPPED (no changes)
+
+[2/3] Backing up VM-DB-01
+[2/3] Copying A:\Virtual Machines\VM-DB-01 -> B:\Backup Virtual Machines\VM-DB-01
+[2/3] COPIED
+
+[3/3] SKIPPED (no destination): VM-FILE-01
+
+All backups complete!
